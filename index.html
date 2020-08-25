@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="flexslider/flexslider.css"> <!--เรียก css ของสไลด์มาใช้-->
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css"> <!--เรียก css ของ popup มาใช้-->
+    <link rel="stylesheet" href="css/style.css">  <!--เรียก css ที่เราตั้งค่าไว้มาใช้-->
+</head>
+<body>
+    <nav>
+        <label>WIP WUP</label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features <i class="fas fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">HTML</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Web Design <i class="fas fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="#">Front End</a></li>
+                    <li><a href="#">Back End</a></li>
+                    <li><a href="#">Other <i class="fas fa-angle-right"></i></a>
+                        <ul>
+                            <li><a href="#">Developer</a></li>
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </li>
+                </ul>        
+            </li>     
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Slide Show Image -->
+    <div class="slideshow">
+
+        <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="images/bg1-ss.jpg" />
+              </li>
+              <li>
+                <img src="images/bg2-ss.jpg" />
+              </li>
+              <li>
+                <img src="images/bg3-ss.jpeg" />
+              </li>
+            </ul>
+          </div>
+
+        <a href=""> <i class="fas fa-chevron-down"></i></a>
+    </div>
+
+
+    <!--Image Gallery-->
+    <h1>Portfolio project</h1>
+    <div class="gallery">
+        <div class="row">
+            <div class="col">
+                <a class="popup" href="images/gallery/g1.jpg"><img src="images/gallery/g1.jpg"></a>
+            </div>
+            <div class="col">
+                <a class="popup" href="images/gallery/g2.jpg"><img src="images/gallery/g2.jpg"></a>
+            </div>
+            <div class="col">
+                <a class="popup" href="images/gallery/g3.jpg"><img src="images/gallery/g3.jpg"></a>
+            </div>
+            <div class="col">
+                <a class="popup" href="images/gallery/g4.jpg"><img src="images/gallery/g4.jpg"></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            &copy;CopyRight2020-2021 Nida@Wing6
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/542ec206a0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>  <!--Code Script Jsquery ที่ไปหามาจากในเน็ต-->   
+    <script src="flexslider/jquery.flexslider.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script>   
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide", // มีแบบ fade , slide
+                slideshowSpeed: 2000,
+                direction:"horizontal" //มีแบบ horizontal , vertical
+            });
+            //popup
+            $('.popup').magnificPopup({
+                type: 'image',
+                //other options
+                //ให้รูปเลื่อนไปทางซ้ายขวาได้
+                gallery: {
+                    enabled: true
+                },
+                //รูปzoomเข้าzoomออก
+                zoom: { 
+                    enabled: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>
